@@ -1,5 +1,5 @@
 import Phaser from "phaser";
-import background from "../assets/footballField.jpg";
+import background from "../assets/castle.jpg";
 
 let graphics;
 let cursors;
@@ -20,10 +20,10 @@ export default new Phaser.Class({
     graphics.fillStyle(0x000000, 1);
     graphics.fillRect(0, 0, 800, 600);
 
-    this.add.text(270, 300, "Press space to start.")
+    this.add.text(270, 300, "Welcome!")
     this.add.text(270, 315, "Move with up, down, left, right.")
     this.add.text(270, 330, "Press spacebar to brake.")
-    this.add.text(270, 345, "Recover all the fumbles to win.")
+    this.add.text(270, 345, "Escape the castle to win.")
   },
   update: function () {
 

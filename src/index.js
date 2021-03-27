@@ -2,6 +2,7 @@ import Phaser from "phaser";
 import MainMenu from "./scenes/MainMenu";
 import Game from "./scenes/Game";
 import WinScreen from "./scenes/WinScreen";
+import LoseScreen from "./scenes/LoseScreen";
 
 var config = {
   type: Phaser.AUTO,
@@ -13,7 +14,7 @@ var config = {
       gravity: { y: 0, x: 0 },
     },
   },
-  scene: [MainMenu, Game, WinScreen]
+  scene: [MainMenu, Game, WinScreen, LoseScreen]
 };
 
 var game = new Phaser.Game(config);
