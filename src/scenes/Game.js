@@ -93,6 +93,7 @@ export default new Phaser.Class({
     this.physics.add.collider(ghosts, mickey, processCollision, null, this);
     this.physics.add.collider(doorKey, mickey, getKey, null, this);
     this.physics.add.collider(castleDoor, mickey, null, escape, this);
+    
 
     mickey.setBounce(1, 1);
     mickey.setCollideWorldBounds(true);
