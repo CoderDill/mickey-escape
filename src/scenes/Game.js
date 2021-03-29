@@ -4,6 +4,7 @@ import player from "../assets/mickey.png";
 import ghost from "../assets/ghost.png";
 import key from "../assets/key.png";
 import door from "../assets/door.png";
+
 import { accelerate, decelerate } from "../utils";
 
 let mickey;
@@ -27,7 +28,7 @@ export default new Phaser.Class({
 
     this.load.image("key", key);
 
-    this.load.image("door", door)
+    this.load.image("door", door);
   },
   create: function create() {
     this.add.image(400, 300, "background");
@@ -40,7 +41,7 @@ export default new Phaser.Class({
 
     const ghosts = this.physics.add.group({
       key: "ghost",
-      repeat: 3,
+      repeat: 5,
       setScale: { x: 0.2, y: 0.2 },
       setXY: { x: 400, y: 300 },
     });
@@ -74,6 +75,7 @@ export default new Phaser.Class({
 
     const processCollision = (mickey, ghost) => {
       this.scene.start("losescreen");
+      hasKey = false;
     };
 
     const getKey = (mickey, doorKey) => {
