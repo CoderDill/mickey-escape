@@ -41,12 +41,12 @@ export default new Phaser.Class({
 
     const ghosts = this.physics.add.group({
       key: "ghost",
-      repeat: 5,
+      repeat: 7,
       setScale: { x: 0.2, y: 0.2 },
       setXY: { x: 400, y: 300 },
     });
 
-    const castleDoor = this.physics.add.group({
+    const castleDoor =     this.physics.add.group({
       key: 'door',
       setScale: {x: 0.4, y: 0.4},
       setXY: { x:738, y: 500}
