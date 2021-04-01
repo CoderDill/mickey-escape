@@ -46,11 +46,11 @@ export default new Phaser.Class({
       setXY: { x: 400, y: 300 },
     });
 
-    const castleDoor =     this.physics.add.group({
-      key: 'door',
-      setScale: {x: 0.4, y: 0.4},
-      setXY: { x:738, y: 500}
-    })
+    const castleDoor = this.physics.add.group({
+      key: "door",
+      setScale: { x: 0.4, y: 0.4 },
+      setXY: { x: 738, y: 500 },
+    });
 
     const doorKey = this.physics.add.group({
       key: "key",
@@ -90,12 +90,11 @@ export default new Phaser.Class({
       } else {
         return false;
       }
-    }
+    };
 
     this.physics.add.collider(ghosts, mickey, processCollision, null, this);
     this.physics.add.collider(doorKey, mickey, getKey, null, this);
     this.physics.add.collider(castleDoor, mickey, null, escape, this);
-    
 
     mickey.setBounce(1, 1);
     mickey.setCollideWorldBounds(true);

@@ -11,7 +11,6 @@ export default new Phaser.Class({
   },
   preload: function preload() {
     this.load.image("background", background);
-    
   },
   create: function () {
     this.add.image(400, 300, "background");
