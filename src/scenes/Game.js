@@ -41,7 +41,7 @@ export default new Phaser.Class({
 
     const ghosts = this.physics.add.group({
       key: "ghost",
-      repeat: 5,
+      repeat: 1,
       setScale: { x: 0.2, y: 0.2 },
       setXY: { x: 400, y: 300 },
     });
